@@ -38,8 +38,7 @@ def train_model():
 
     print("Loading Dataset...")
 
-    df = pd.read_csv("C:\\Sarika\\Programming\\RNN\\onetoone\\BankNote_Authentication.csv")
-
+    
     print(df.head())
     df = pd.read_csv("ner.csv")
 
@@ -352,7 +351,7 @@ def train_model():
 if not os.path.exists(MODEL):
 
     train_model()
-    
+model = load_model(MODEL)    
     
     
     
@@ -364,7 +363,7 @@ def predict_sentence(sentence):
 
     # Load Model
 
-    model = load_model(MODEL)
+    
 
     # Load Dictionaries
 
